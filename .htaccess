@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+RewriteRule ^home$ main.php?page=home [L]
+RewriteRule ^about$ main.php?page=about [L]
+RewriteRule ^service$ main.php?page=service [L]
+RewriteRule ^portfolio$ main.php?page=portfolio [L]
+RewriteRule ^page-(.*)$ main.php?page=portfolio&hal=$1 [L]
+
+RewriteRule ^contact$ main.php?page=contact [L]
+RewriteRule ^contact-success$ main.php?page=contact&alert=1 [L]
+
+Options All -Indexes
+</IfModule>
